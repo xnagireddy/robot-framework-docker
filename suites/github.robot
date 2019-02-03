@@ -9,12 +9,12 @@ ${API_TOKEN}    %{ACCESS_TOKEN}
 
 *** Test Cases ***
 Access an api request as unauthorized user
-    Given users fullname "Ipatios Asmanidis"
+    Given users fullname "John Doe"
     When is fetching his profile from api
     Then request is forbidden
 
 Access an api request as authorized user
-    Given users fullname "Ipatios Asmanidis"
+    Given users fullname "John Doe"
       And user is authorized
     When is fetching his profile from api
     Then users profile is retrieved
